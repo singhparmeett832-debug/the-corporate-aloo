@@ -16,22 +16,31 @@
 <div class="visual"><div class="blob"></div><div class="blob2"></div><span class="mainveg">🥔</span><span class="veg v1">🍆</span><span class="veg v2">🫑</span><span class="veg v3">🌶️</span><span class="veg v4">🍅</span><div class="sticker one">NEW EPISODE IDEA?<br>DROP IT HERE ↓</div><div class="sticker two">THE AUDIENCE<br>IS THE BOSS ✦</div></div></section>
 <div class="marquee"><span>LESS SCROLLING. MORE STORYLINES. ✳ YOUR IDEA ✳ OUR NEXT EPISODE ✳ OFFICE DRAMA, COMMUNITY POWER ✳ LESS SCROLLING. MORE STORYLINES. ✳ YOUR IDEA ✳ OUR NEXT EPISODE ✳ OFFICE DRAMA, COMMUNITY POWER ✳</span></div>
 <section class="section wrap" id="how"><div class="section-head"><div><div class="kicker">01 / SIMPLE AS THAT</div><h2>From your brain to our boardroom.</h2></div><p class="sub">Make the website part of every video: “Want to choose what happens next? Visit our site and pitch your episode idea.”</p></div><div class="ideas"><article class="idea"><div class="idea-icon">💡</div><h3>01. Pitch the plot</h3><p>Tell us a topic, workplace situation, character rivalry, or a totally chaotic story idea.</p></article><article class="idea"><div class="idea-icon">🗳️</div><h3>02. The audience decides</h3><p>Suggest topics and vote on what you want to see next. The most-loved ideas can inspire future episodes.</p></article><article class="idea"><div class="idea-icon">🎬</div><h3>03. Watch it come alive</h3><p>We choose ideas to develop, create the episode, and share it on The Corporate Aloo Instagram.</p></article></div></section>
-<section class="section request-section" id="request"><div class="wrap request-grid"><div class="request-copy"><div class="kicker">02 / YOUR IDEA STARTS HERE</div><h2>What should<br>happen next?</h2><p class="sub">Give us your plot twist, office nightmare, or character showdown. Keep it funny, unexpected, and a little unprofessional. (Fictional office chaos only, please.)</p><div class="step"><b>1</b><span>Pick a topic or invent your own.</span></div><div class="step"><b>2</b><span>Choose the character you want involved.</span></div><div class="step"><b>3</b><span>Submit your idea. We’ll review it for future episodes.</span></div></div>
+<section class="section request-section" id="request"><div class="wrap request-grid"><div class="request-copy"><div class="kicker">02 / YOUR IDEA STARTS HERE</div><h2>What should<br>happen next?</h2><p class="sub">Give us your plot twist, office nightmare, or character showdown. Keep it funny, unexpected, and a little unprofessional. (Fictional office chaos only, please.)</p><div class="step"><b>1</b><span>Pick a topic or invent your own.</span></div><div class="step"><b>2</b><span>Choose the character you want involved.</span></div><div class="step"><b>3</b><span>Submit your idea or feedback. We’ll review everything!</span></div></div>
 
-<!-- Form connected directly to Formspree endpoint -->
+<!-- Form connected directly to Formspree endpoint with Feedback option -->
 <form class="formbox" id="ideaForm" action="https://formspree.io/f/mbggklpd" method="POST">
-  <h3>Pitch your episode ✳</h3>
-  <p>The next iconic storyline could start with you.</p>
+  <h3>Pitch or Feedback ✳</h3>
+  <p>Drop your episode ideas or general feedback right here.</p>
   
   <div class="field">
-    <label for="topic">WHAT SHOULD THE EPISODE BE ABOUT? *</label>
-    <input id="topic" name="topic" maxlength="120" placeholder="e.g. Aloo accidentally becomes CEO for a day" required>
+    <label for="submission_type">WHAT ARE YOU SENDING? *</label>
+    <select id="submission_type" name="submission_type">
+      <option value="Episode Pitch">🎬 Episode Pitch / Storyline Idea</option>
+      <option value="Feedback / Suggestion">💬 General Feedback or Suggestion</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="topic">TOPIC / SUBJECT *</label>
+    <input id="topic" name="topic" maxlength="120" placeholder="e.g. Aloo accidentally becomes CEO for a day (or your feedback)" required>
   </div>
   
   <div class="twofields">
     <div class="field">
-      <label for="character">FEATURED CHARACTER</label>
+      <label for="character">FEATURED CHARACTER (OPTIONAL)</label>
       <select id="character" name="character">
+        <option value="None / General">None / General Feedback</option>
         <option>Aloo 🥔</option>
         <option>Baingan 🍆</option>
         <option>CEO Pepper 🫑</option>
@@ -50,6 +59,7 @@
         <option>Office romance parody</option>
         <option>CEO vs employees</option>
         <option>Audience chooses the ending</option>
+        <option>General Feedback / Review</option>
         <option>Something totally wild</option>
       </select>
     </div>
@@ -57,7 +67,7 @@
   
   <div class="field">
     <label for="details">TELL US A LITTLE MORE (OPTIONAL)</label>
-    <textarea id="details" name="details" maxlength="500" placeholder="What's the twist? What should happen? Make us laugh…"></textarea>
+    <textarea id="details" name="details" maxlength="500" placeholder="What's the twist? Or what feedback do you have for us? Make us laugh…"></textarea>
   </div>
   
   <div class="field">
@@ -65,16 +75,16 @@
     <input id="handle" name="handle" maxlength="40" placeholder="@yourusername">
   </div>
   
-  <button class="btn lime form-submit" type="submit">SUBMIT MY IDEA ↗</button>
+  <button class="btn lime form-submit" type="submit">SEND TO CREATOR ↗</button>
   
-  <div class="fineprint">Your submission will be sent directly to the creator's inbox so we can review your episode ideas!</div>
+  <div class="fineprint">Your submission or feedback will be sent directly to the creator's inbox (`thecorporatepotato.work1@gmail.com`)!</div>
 </form>
 
 </div></section>
 <section class="section wrap" id="vote"><div class="vote-area"><div><div class="kicker">03 / QUICK COMMUNITY VOTE</div><h2>Which storyline<br>should we cook up?</h2><p class="sub">Tap one option. This demo remembers your choice in this browser so you can test the interaction.</p></div><div><div class="options"><button type="button" class="option" data-topic="CEO vs Employees"><span class="emo">🫑</span><span><strong>CEO vs Employees</strong><small>Boardroom chaos incoming.</small></span><span class="tick">✓</span></button><button type="button" class="option" data-topic="Office Group Chat Leaked"><span class="emo">📱</span><span><strong>Office Group Chat Leaked</strong><small>Nothing stays private for long.</small></span><span class="tick">✓</span></button><button type="button" class="option" data-topic="Aloo Becomes the Boss"><span class="emo">🥔</span><span><strong>Aloo Becomes the Boss</strong><small>Power will go straight to his head.</small></span><span class="tick">✓</span></button><button type="button" class="option" data-topic="Baingan's Secret Plan"><span class="emo">🍆</span><span><strong>Baingan's Secret Plan</strong><small>Probably a terrible idea.</small></span><span class="tick">✓</span></button></div><div class="vote-msg" id="voteMsg" aria-live="polite"></div></div></div></section>
 <section class="section wrap" id="characters"><div class="section-head"><div><div class="kicker">04 / THE CAST</div><h2>Pick your chaos agent.</h2></div><p class="sub">Got a favourite? Put them in your episode pitch above.</p></div><div class="characters"><div class="char"><span class="emoji">🥔</span><b>Aloo</b><small>Main character</small></div><div class="char"><span class="emoji">🍆</span><b>Baingan</b><small>Plot schemer</small></div><div class="char"><span class="emoji">🫑</span><b>CEO Pepper</b><small>She runs the show</small></div><div class="char"><span class="emoji">🍅</span><b>Tomato</b><small>Office gossip</small></div><div class="char"><span class="emoji">🥒</span><b>Karela</b><small>Brutal honesty</small></div><div class="char"><span class="emoji">🌶️</span><b>Chilli</b><small>Chaos starter</small></div></div></section>
 <section class="section wrap" style="padding-top:0"><div class="cta"><div><div class="kicker">FOLLOW THE STORY</div><h2>Your idea. Our next episode.</h2><p>Follow The Corporate Aloo on Instagram to catch new episodes and see which ideas make it into the office.</p></div><a class="btn purple" href="https://www.instagram.com/thecorporatealoo/" target="_blank" rel="noopener">FOLLOW @THECORPORATEALOO ↗</a></div></section>
-</main><footer class="wrap footer"><div><b>THE CORPORATE ALOO ✳</b><br>Office drama, now audience-powered.</div><div><b>CONTACT US</b><br><a href="mailto:thecorporatepotato.work1@gmail.com">thecorporatepotato.work1@gmail.com</a><br><span style="display:inline-block;margin-top:7px">LIVE SUBMISSIONS CONNECTED TO INBOX</span></div><a href="#top">BACK TO TOP ↑</a></footer><div class="toast" id="toast" role="status"></div>
+</main><footer class="wrap footer"><div><b>THE CORPORATE ALOO ✳</b><br>Office drama, now audience-powered.</div><div><b>CONTACT US</b><br><a href="mailto:thecorporatepotato.work1@gmail.com">thecorporatepotato.work1@gmail.com</a><br><span style="display:inline-block;margin-top:7px">LIVE SUBMISSIONS & FEEDBACK CONNECTED TO INBOX</span></div><a href="#top">BACK TO TOP ↑</a></footer><div class="toast" id="toast" role="status"></div>
 <script>
 const toast=document.getElementById('toast');let timer;function showToast(s){toast.textContent=s;toast.classList.add('show');clearTimeout(timer);timer=setTimeout(()=>toast.classList.remove('show'),2600)}
 document.querySelectorAll('.option').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.option').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');const msg=document.getElementById('voteMsg');msg.style.display='block';msg.textContent='Vote saved in this browser: “'+btn.dataset.topic+'”. Imagine this leading the next episode!';try{localStorage.setItem('corporateAlooDemoVote',btn.dataset.topic)}catch(err){}showToast('You voted for: '+btn.dataset.topic)}));
