@@ -1,37 +1,44 @@
 <!-- The Corporate Aloo - Submission Form Section -->
-<form action="https://formspree.io/f/thecorporatepotato.work1@gmail.com" method="POST" class="space-y-4">
-  
-  <!-- Instagram Input -->
-  <div class="relative">
-    <label for="instagram" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-1">Your Instagram @ (Optional)</label>
-    <input 
-      type="text" 
-      id="instagram" 
-      name="instagram" 
-      placeholder="@yourusername" 
-      class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:border-purple-600 text-sm font-medium bg-white"
+<div class="bg-[#ffffff] p-6 rounded-3xl shadow-xl border border-neutral-200">
+  <form id="pitchForm" onsubmit="event.preventDefault(); showDemoNotice();" class="space-y-4">
+    
+    <!-- Instagram Input -->
+    <div>
+      <label class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-1">Your Instagram @ (Optional)</label>
+      <input 
+        type="text" 
+        id="instaInput" 
+        placeholder="@yourusername" 
+        class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:border-purple-600 text-sm font-medium bg-white"
+      >
+    </div>
+
+    <!-- Submit Button -->
+    <button 
+      type="submit" 
+      class="w-full py-4 bg-[#ccff00] text-neutral-900 font-extrabold rounded-xl shadow-md hover:bg-[#b3e600] transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wider cursor-pointer"
     >
+      Submit My Idea ↗
+    </button>
+  </form>
+
+  <!-- Demo Notice & Preview Box -->
+  <p class="text-xs text-neutral-500 mt-4 leading-relaxed">
+    Preview mode: submissions are saved only in this browser on this device. This demo does not send your idea to the creator yet. Before sharing this website publicly, connect this form to an online form/database so you can receive audience ideas.
+  </p>
+
+  <div id="demoResultBox" class="mt-4 p-4 bg-[#e8f5e9] border border-[#c8e6c9] rounded-2xl hidden">
+    <p class="text-xs font-bold text-emerald-800 flex items-center gap-1.5 mb-1">
+      🎉 Pitch received in this demo!
+    </p>
+    <p class="text-xs text-emerald-700 font-medium">Your idea: "Diwali bonus"</p>
+    <p class="text-xs text-emerald-700 font-medium">Character: Aloo 🥔 · Vibe: Office comedy</p>
+    <p class="text-[11px] text-emerald-600 mt-2 italic">Saved on this device only—not sent to the creator yet.</p>
   </div>
+</div>
 
-  <!-- Idea / Storyline Input -->
-  <div class="relative">
-    <label for="idea" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-1">Your Idea / Storyline</label>
-    <input 
-      type="text" 
-      id="idea" 
-      name="idea" 
-      required
-      placeholder="e.g. Diwali bonus comedy skit..." 
-      class="w-full px-4 py-3 rounded-xl border border-neutral-300 focus:outline-none focus:border-purple-600 text-sm font-medium bg-white"
-    >
-  </div>
-
-  <!-- Submit Button -->
-  <button 
-    type="submit" 
-    class="w-full py-4 bg-[#ccff00] text-neutral-900 font-extrabold rounded-xl shadow-md hover:bg-[#b3e600] transition-all flex items-center justify-center gap-2 text-sm uppercase tracking-wider cursor-pointer"
-  >
-    Submit My Idea ↗
-  </button>
-
-</form>
+<script>
+  function showDemoNotice() {
+    document.getElementById('demoResultBox').classList.remove('hidden');
+  }
+</script>
